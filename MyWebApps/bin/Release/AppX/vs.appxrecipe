@@ -28,7 +28,7 @@
     <AppXManifest Include="D:\Work\MyWebApps\MyWebApps\bin\Release\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-08-14T10:31:44.063</Modified>
+      <Modified>2016-08-14T18:02:56.556</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -132,19 +132,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\index.html">
       <PackagePath>index.html</PackagePath>
-      <Modified>2016-08-14T10:48:39.039</Modified>
+      <Modified>2016-08-14T17:49:00.037</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\fonts\placeholder">
       <PackagePath>js\fonts\placeholder</PackagePath>
       <Modified>2016-08-13T17:04:23.500</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\jquery-2.0.3.min.js">
-      <PackagePath>js\jquery-2.0.3.min.js</PackagePath>
-      <Modified>2016-06-04T14:39:58.798</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\main.js">
       <PackagePath>js\main.js</PackagePath>
-      <Modified>2016-08-14T09:45:22.956</Modified>
+      <Modified>2016-08-14T18:01:05.168</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\md5.js">
       <PackagePath>js\md5.js</PackagePath>
@@ -152,7 +148,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\bin\Release\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-08-14T10:31:44.027</Modified>
+      <Modified>2016-08-14T18:02:56.517</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

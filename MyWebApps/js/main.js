@@ -158,8 +158,13 @@
             to: to,
             sign: sign
         }, function (obj) {
-            document.getElementById('resultData').innerText = "" + decodeURIComponent('' + obj.trans_result[0].dst);
+            try {
+                if (obj != null && obj.trans_result.length > 0) {
+                    document.getElementById('resultData').innerText = "" + decodeURIComponent('' + obj.trans_result[0].dst);
+                }
+            } catch (e) {
 
+            }
         });
     }
     //自动增加高度textarea

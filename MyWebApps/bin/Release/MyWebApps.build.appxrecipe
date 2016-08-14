@@ -104,9 +104,6 @@
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\fonts\placeholder">
       <PackagePath>js\fonts\placeholder</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\jquery-2.0.3.min.js">
-      <PackagePath>js\jquery-2.0.3.min.js</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\main.js">
       <PackagePath>js\main.js</PackagePath>
     </AppxPackagedFile>
