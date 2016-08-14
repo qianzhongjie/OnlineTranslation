@@ -208,6 +208,18 @@
     document.getElementById("postBtn").addEventListener('click', function () {
         fanYi();
     }, false);
+
+    //获得焦点 监视回车键
+    document.getElementById("textarea").onfocus = function () {
+
+        document.onkeydown = function () {
+            if (event.keyCode == 13) {
+                document.getElementById("textarea").innerHTML = document.getElementById("textarea").innerText.substring(0, document.getElementById("textarea").innerText.length - 1);
+                fanYi();
+            }
+        }
+    }
+
     disabledDefault();
 })();
 window.onerror = function (E) {

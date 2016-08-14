@@ -140,7 +140,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\main.js">
       <PackagePath>js\main.js</PackagePath>
-      <Modified>2016-08-14T18:01:05.168</Modified>
+      <Modified>2016-08-14T18:39:10.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Work\MyWebApps\MyWebApps\js\md5.js">
       <PackagePath>js\md5.js</PackagePath>
