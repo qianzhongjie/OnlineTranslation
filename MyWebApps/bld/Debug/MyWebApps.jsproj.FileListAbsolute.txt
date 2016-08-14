@@ -1,0 +1,16 @@
+D:\Work\MyWebApps\MyWebApps\bin\Debug\ReverseMap\resources.pri
+D:\Work\MyWebApps\MyWebApps\bin\Debug\AppxManifest.xml
+D:\Work\MyWebApps\MyWebApps\bin\Debug\MyWebApps.build.appxrecipe
+D:\Work\MyWebApps\MyWebApps\bld\Debug\ResourceHandlingTask.state
+D:\Work\MyWebApps\MyWebApps\bld\Debug\priconfig.xml
+D:\Work\MyWebApps\MyWebApps\bld\Debug\priconfig.xml.intermediate
+D:\Work\MyWebApps\MyWebApps\bld\Debug\layout.resfiles
+D:\Work\MyWebApps\MyWebApps\bld\Debug\layout.resfiles.intermediate
+D:\Work\MyWebApps\MyWebApps\bld\Debug\resources.resfiles
+D:\Work\MyWebApps\MyWebApps\bld\Debug\resources.resfiles.intermediate
+D:\Work\MyWebApps\MyWebApps\bld\Debug\pri.resfiles
+D:\Work\MyWebApps\MyWebApps\bld\Debug\pri.resfiles.intermediate
+D:\Work\MyWebApps\MyWebApps\bld\Debug\qualifiers.txt
+D:\Work\MyWebApps\MyWebApps\bld\Debug\qualifiers.txt.intermediate
+D:\Work\MyWebApps\MyWebApps\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Work\MyWebApps\MyWebApps\bld\Debug\ProjectArchitectures.txt

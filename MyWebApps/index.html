@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- meta使用viewport以确保页面可自由缩放 -->
+    <!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport"/>-->
+    <meta charset="utf-8" />
+    <title>在线翻译</title>
+    <!-- SDK sample framework references -->
+    <link rel="stylesheet" href="/css/default.css" />
+    <!--<link rel="stylesheet" href="/css/windows-app.css" />-->
+    <!--<script src="js/jquery-2.0.3.min.js"></script>-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/md5.js"></script>
+
+
+
+</head>
+<body>
+    <div>
+        <div data-role="header" style="background-color:rgba(222, 222, 222, 1)">
+            <h2 id="demo" style="margin-left: 30%;width:40%">在线翻译</h2>
+        </div>
+
+        <div>
+            <div class="form-inline" method="post">
+                <div class="form-group">
+                    <label for="fromLug">翻译语言:</label>
+                    <select class="form-control" id="fromLug" name="from">
+                        <option selected="selected" value="auto">
+                            自动检测
+                        </option>
+                        <option value="zh">
+                            简体中文
+                        </option>
+                        <option value="en">
+                            英文
+                        </option>
+                        <option value="cht">
+                            繁体中文
+                        </option>
+                        <option value="yue">
+                            粤语
+                        </option>
+                        <option value="wyw">
+                            文言文
+                        </option>
+                        <option value="jp">
+                            日语
+                        </option>
+                        <option value="kor">
+                            韩语
+                        </option>
+                        <option value="fra">
+                            法语
+                        </option>
+                        <option value="spa">
+                            西班牙语
+                        </option>
+                        <option value="th">
+                            泰语
+                        </option>
+                        <option value="ara">
+                            阿拉伯语
+                        </option>
+                        <option value="ru">
+                            俄语
+                        </option>
+                        <option value="pt">
+                            葡萄牙语
+                        </option>
+                        <option value="de">
+                            德语
+                        </option>
+                        <option value="it">
+                            意大利语
+                        </option>
+                        <option value="el">
+                            希腊语
+                        </option>
+                        <option value="nl">
+                            荷兰语
+                        </option>
+                        <option value="pl">
+                            波兰语
+                        </option>
+                        <option value="bul">
+                            保加利亚语
+                        </option>
+                        <option value="est">
+                            爱沙尼亚语
+                        </option>
+                        <option value="dan">
+                            丹麦语
+                        </option>
+                        <option value="fin">
+                            芬兰语
+                        </option>
+                        <option value="cs">
+                            捷克语
+                        </option>
+                        <option value="rom">
+                            罗马尼亚语
+                        </option>
+                        <option value="slo">
+                            斯洛文尼亚语
+                        </option>
+                        <option value="swe">
+                            瑞典语
+                        </option>
+                        <option value="hu">
+                            匈牙利语
+                        </option>
+                    </select>
+                </div>
+                <button class="btn btn-default" style="float: right" id="swithObj"><i class="glyphicon glyphicon-refresh"></i>交换</button>
+                <span style="width: 10px; height: 10px;"></span>
+                <div class="form-group">
+                    <label for="toLug">目标语言:</label>
+                    <select class="form-control" id="toLug" name="to">
+                        <option selected="selected" value="zh">
+                            简体中文
+                        </option>
+                        <option value="en">
+                            英文
+                        </option>
+                        <option value="cht">
+                            繁体中文
+                        </option>
+                        <option value="yue">
+                            粤语
+                        </option>
+                        <option value="wyw">
+                            文言文
+                        </option>
+                        <option value="jp">
+                            日语
+                        </option>
+                        <option value="kor">
+                            韩语
+                        </option>
+                        <option value="fra">
+                            法语
+                        </option>
+                        <option value="spa">
+                            西班牙语
+                        </option>
+                        <option value="th">
+                            泰语
+                        </option>
+                        <option value="ara">
+                            阿拉伯语
+                        </option>
+                        <option value="ru">
+                            俄语
+                        </option>
+                        <option value="pt">
+                            葡萄牙语
+                        </option>
+                        <option value="de">
+                            德语
+                        </option>
+                        <option value="it">
+                            意大利语
+                        </option>
+                        <option value="el">
+                            希腊语
+                        </option>
+                        <option value="nl">
+                            荷兰语
+                        </option>
+                        <option value="pl">
+                            波兰语
+                        </option>
+                        <option value="bul">
+                            保加利亚语
+                        </option>
+                        <option value="est">
+                            爱沙尼亚语
+                        </option>
+                        <option value="dan">
+                            丹麦语
+                        </option>
+                        <option value="fin">
+                            芬兰语
+                        </option>
+                        <option value="cs">
+                            捷克语
+                        </option>
+                        <option value="rom">
+                            罗马尼亚语
+                        </option>
+                        <option value="slo">
+                            斯洛文尼亚语
+                        </option>
+                        <option value="swe">
+                            瑞典语
+                        </option>
+                        <option value="hu">
+                            匈牙利语
+                        </option>
+
+                    </select>
+                </div>
+
+                <div style="width: 100%">
+
+                    <textarea class="form-control" name="query" id="textarea" style="width: 100%; height: auto;margin-top:10px" placeholder="要翻译的文字" rows="5"></textarea>
+
+                    <a class="btn btn-success" id="postBtn" style="float: right; margin-top: 5px"><i class="glyphicon glyphicon-search"></i>翻译</a>
+                </div>
+                <!--<span style="padding-top: 20px;">结果:</span>-->
+                <div style="padding-top:20px">
+                    <textarea class="form-control bg-success" style="margin-top: 20px;width:100%" rows="8" id="resultData" readonly placeholder="翻译结果"></textarea>
+
+                    <!--<a class="btn btn-default" style="z-index:2;margin-left: 48%; display: none; float: right; width: 60px;margin-top:20px" id="copy">复制</a>-->
+                </div>
+            </div>
+
+        </div>
+        <div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
