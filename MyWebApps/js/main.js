@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    //htttp请求 get post
+    //封装htttp请求 get post
     function httpRequest(url, type, data, result) {
         //var name = encodeURI("北京西");
         //var dzb = "username=" + name + "&password=123";
@@ -55,6 +55,7 @@
         }
         //开始请求
         if (xmlhttp != null) {
+            //封装请求参数
             var s = allPrpos(data);
             send(s);
         }
@@ -132,7 +133,7 @@
         disabledDefault();
     };
 
-    //翻译
+    //翻译common
     function fanYi() {
         if (trimString(document.getElementById("textarea").innerText) == '') {
             document.getElementById('resultData').innerHTML = "输入要翻译的文字";
@@ -158,12 +159,11 @@
             sign: sign
         }, function (obj) {
             document.getElementById('resultData').innerText = "" + decodeURIComponent('' + obj.trans_result[0].dst);
-            //document.getElementById("copy").style.display = 'block';
 
         });
     }
-    
-    function ResizeTextarea(idString) {
+    //自动增加高度textarea
+    function resizeTextarea(idString) {
         // 最小高度
         var minRows = 7;
         // 最大高度，超过则出现滚动条
@@ -194,81 +194,16 @@
             }
         }
     }
-    //复制到剪切板
-    //function copyCode(s) {
-
-    //    if (window.clipboardData) {
-    //        window.clipboardData.setData("Text", s);
-    //        //alert("已经复制到剪切板！"+ "\n" + s);
-    //    } else if (navigator.userAgent.indexOf("Opera") != -1) {
-    //        window.location = s;
-    //    } else if (window.netscape) {
-    //        try {
-    //            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-    //        } catch (e) {
-    //            //alert("被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
-    //        }
-    //        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
-    //        if (!clip)
-    //            return;
-    //        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
-    //        if (!trans)
-    //            return;
-    //        trans.addDataFlavor('text/unicode');
-    //        var str = new Object();
-    //        var len = new Object();
-    //        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
-    //        var copytext = s;
-    //        str.data = copytext;
-    //        trans.setTransferData("text/unicode", str, copytext.length * 2);
-    //        var clipid = Components.interfaces.nsIClipboard;
-    //        if (!clip)
-    //            return false;
-    //        clip.setData(trans, null, clipid.kGlobalClipboard);
-           
-    //    }
-    //    document.getElementById("copy").style.display = 'none';
-    //}
 
     //交换点击时间
     document.getElementById("swithObj").addEventListener('click', function () {
         delOption();
-        //var fs = document.getElementById("fromLug").innerHTML;
-        //var ts = document.getElementById("toLug").innerHTML;
-        //document.getElementById("fromLug").innerHTML = ts;
-        //document.getElementById("toLug").innerHTML = fs;
-
     }, false);
     //翻译点击事件
     document.getElementById("postBtn").addEventListener('click', function () {
         fanYi();
     }, false);
-
-    //document.getElementById("resultData").onclick = function () {
-    //    if (trimString(document.getElementById("resultData").textContent) != "") {
-    //        if (document.getElementById("copy").style.display == 'none') {
-    //            document.getElementById("copy").style.display = 'block';
-    //        } else {
-    //            document.getElementById("copy").style.display = 'none';
-    //        }
-    //    }
-    //}
-
-    //
-    //document.getElementById("copy").onclick = function () {
-    //    var text = document.getElementById("resultData").textContent;
-    //    copyCode(text);
-    //}
-    //输入框change
-    //document.getElementById("textarea").onfocus= function() {
-
-    //    onkeyup=
-    //    fanYi();
-    //}
     disabledDefault();
-    //ResizeTextarea("textarea");
-    //ResizeTextarea("resultData");
-    //seletChange();
 })();
 window.onerror = function (E) {
     debugger;
